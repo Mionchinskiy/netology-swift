@@ -18,7 +18,7 @@ var allDataTrue = vkDataTrue + fbDataTrue + instDataTrue + youTubeDataTrue + web
 print(allDataTrue)
 
 
-// Задача 1.3 - Решение через optional binding
+// Задача 1.2 - Решение через optional binding
 
 if let DataCheck = Int(vkData) {
     vkDataTrue = Int(vkData)!
@@ -93,3 +93,19 @@ default:
 
 allDataTrue = vkDataTrue + fbDataTrue + instDataTrue + youTubeDataTrue + webSiteDataTrue
 print(allDataTrue)
+
+
+// Задача 2
+
+var isConfirm = true
+
+if Int(vkData) != nil {
+    if isConfirm {
+        print("Ты подтвердил оплату на сумму \(Int(vkData)!)")
+    } else {
+        print("Платеж отменен")
+    }
+} else{
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
+
