@@ -109,3 +109,18 @@ if Int(vkData) != nil {
     print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
 }
 
+
+
+// Задача 3
+
+var sumDataTrue = 0
+
+var arrayData = [vkData, fbData, instData, youTubeData, webSiteData]
+
+for someData in arrayData {
+    if Int(someData) != nil {
+        sumDataTrue += Int(someData)!
+    }
+}
+
+print(sumDataTrue)
