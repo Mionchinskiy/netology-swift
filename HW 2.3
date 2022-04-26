@@ -1,0 +1,95 @@
+
+let vkData = "19067"
+let fbData = "13400"
+let instData = "_10045"
+let youTubeData = "10$0d00"
+let webSiteData = "I0I12"
+
+
+// Задача 1.1 - Решение через nil-coalescing (оптимальное)
+
+var vkDataTrue = Int(vkData) ?? 0
+var fbDataTrue = Int(fbData) ?? 0
+var instDataTrue = Int(instData) ?? 0
+var youTubeDataTrue = Int(youTubeData) ?? 0
+var webSiteDataTrue = Int(webSiteData) ?? 0
+
+var allDataTrue = vkDataTrue + fbDataTrue + instDataTrue + youTubeDataTrue + webSiteDataTrue
+print(allDataTrue)
+
+
+// Задача 1.3 - Решение через optional binding
+
+if let DataCheck = Int(vkData) {
+    vkDataTrue = Int(vkData)!
+} else {
+    vkDataTrue = 0
+}
+
+if let DataCheck = Int(vkData) {
+    fbDataTrue = Int(fbData)!
+} else {
+    fbDataTrue = 0
+}
+
+if let DataCheck = Int(instData) {
+    instDataTrue = Int(instData)!
+} else {
+    instDataTrue = 0
+}
+
+if let DataCheck = Int(youTubeData) {
+    youTubeDataTrue = Int(youTubeData)!
+} else {
+    youTubeDataTrue = 0
+}
+
+if let DataCheck = Int(webSiteData) {
+    webSiteDataTrue = Int(webSiteData)!
+} else {
+    webSiteDataTrue = 0
+}
+
+allDataTrue = vkDataTrue + fbDataTrue + instDataTrue + youTubeDataTrue + webSiteDataTrue
+print(allDataTrue)
+
+
+// Задача 1.3 - Решение через forced unwrapping
+
+switch Int(vkData) {
+case nil:
+    vkDataTrue = 0
+default:
+    vkDataTrue = Int(vkData)!
+}
+
+switch Int(fbData) {
+case nil:
+    fbDataTrue = 0
+default:
+    fbDataTrue = Int(fbData)!
+}
+
+switch Int(instData) {
+case nil:
+    instDataTrue = 0
+default:
+    instDataTrue = Int(instData)!
+}
+
+switch Int(youTubeData) {
+case nil:
+    youTubeDataTrue = 0
+default:
+    youTubeDataTrue = Int(youTubeData)!
+}
+
+switch Int(webSiteData) {
+case nil:
+    webSiteDataTrue = 0
+default:
+    webSiteDataTrue = Int(webSiteData)!
+}
+
+allDataTrue = vkDataTrue + fbDataTrue + instDataTrue + youTubeDataTrue + webSiteDataTrue
+print(allDataTrue)
