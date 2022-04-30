@@ -1,0 +1,36 @@
+
+
+// Задача 1
+
+var dataIvanov: (favMovieData: String, favNumberData: Int, favMealData: String) = ("Челюсти", 42, "Тако")
+
+let (favMovie, favNumber, favMeal) = dataIvanov
+
+var dataPetrova = (favMovieData: "Чип и Дейл", favNumberData: 777, favMealData: "Картофан")
+
+let tempTuple = dataPetrova
+dataPetrova = dataIvanov
+dataIvanov = tempTuple
+
+let finalTuple = (dataIvanov.favNumberData, dataPetrova.favNumberData, dataIvanov.favNumberData - dataPetrova.favNumberData)
+
+
+// Задача 2
+
+let dataOfUniversuty = ["Olga":["Biology":5, "Math":5, "Chem":5], "Denis":["Biology":4, "Math":5, "Chem":5], "Vasilisa":["Biology":5, "Math":3, "Chem":2]]
+
+
+// Задача 3 (она же Задача 4*)
+
+typealias Chessman = [String: (alpha:Character, num:Int)?]
+
+var chessmans: Chessman = ["Пешка":("a",2), "Ладья":("f",4), "Конь":nil]
+
+for (key,value) in chessmans {
+    if value != nil {
+        print("Координаты фигуры \(key) - \(value!)")
+    } else {
+        print("Фигура \(key) отсутствует на игровом поле")
+    }
+}
+
