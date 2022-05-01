@@ -1,0 +1,76 @@
+// Решение задачи №1:
+
+var doerrShortStories: [String] = []
+
+writeNewStory(author: &doerrShortStories, newStory: "The Shell Collector")
+writeNewStory(author: &doerrShortStories, newStory: "The Caretaker")
+writeNewStory(author: &doerrShortStories, newStory: "Mkondo")
+burnBadStory(author: &doerrShortStories, deleteStory: "The Caretaker")
+
+
+func writeNewStory (author: inout[String], newStory: String) {
+    author.append(newStory)
+}
+
+
+func burnBadStory (author: inout[String], deleteStory: String) {
+    if author.count == 0 {
+        print("!!! Запрашиваемый массив данных пуст !!!")
+    } else {
+        if let temp = author.firstIndex(of: deleteStory) {
+            author.remove(at: temp)
+        } else {
+            print("!!! Запрашиваемое для удаления значение отсутствует !!!")
+        }
+    }
+}
+
+print(doerrShortStories)
+print("====================================")
+
+
+
+
+// Решение задачи №2:
+// подготовленный словарь
+
+print (userPoints)
+print ("====================================")
+
+func convOfPoints (incData: [Int:Double], takePoints: Int, giveRub: Int) -> [Int:Int] {
+    var temp: [Int:Int] = [:]
+    for (key,value) in incData {
+        temp[key] = (Int(value) / takePoints) * giveRub
+    }
+    return temp
+}
+
+print(convOfPoints (incData: userPoints, takePoints: 100, giveRub: 10))
+print ("====================================")
+
+
+
+
+// Решение задачи №3(*)
+// подготовленный массив
+arrayOfNumbers
+
+func calculateSumEvenOddValues(from array: [Int?]) -> (Int, Int) {
+    let temp = Set(array)
+    var even: Int = 0
+    var odd: Int = 0
+    for value in temp {
+    if let x = value {
+        if x % 2 == 0 {
+        even += x
+        } else {
+            odd += x
+        }
+    }
+    }
+  return (even,odd)
+}
+
+// проверка решения Задача №3
+print(calculateSumEvenOddValues(from: arrayOfNumbers))
+
