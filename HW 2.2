@@ -1,0 +1,92 @@
+
+
+// Задача 1
+
+let january = "Январь"
+let february = "Февраль"
+let march = "Март"
+let april = "Апрель"
+let may = "Май"
+let june = "Июнь"
+let july = "Июль"
+let august = "Август"
+let september = "Сентябрь"
+let october = "Октябрь"
+let november = "Ноябрь"
+let december = "Декабрь"
+
+var selectedMonth: String = "Февраль"
+var selectedYear: Int = 2022
+
+var checkLeapYear = selectedYear % 4 // Дабы чуть усложнить себе задачу стал учитывать и високосные года
+
+if selectedMonth == january {
+    print("В январе 15 рабочих дней")
+} else if selectedMonth == february && checkLeapYear == 0 {
+    print("В феврале 18 рабочих дней")
+} else if selectedMonth == february && checkLeapYear != 0{
+    print("В феврале 19 рабочих дней")
+} else if selectedMonth == march {
+    print("В марте 22 рабочих дня")
+} else if selectedMonth == april {
+    print("В апреле 22 рабочих дня")
+} else if selectedMonth == may {
+    print("В мае 22 рабочих дня")
+} else if selectedMonth == june {
+    print("В июне 21 рабочий день")
+} else if selectedMonth == july {
+    print("В июле 23 рабочих дня")
+} else if selectedMonth == august {
+    print("В августе 23 рабочих дня")
+} else if selectedMonth == september {
+    print("В сентябре 22 рабочих дня")
+} else if selectedMonth == october {
+    print("В октябре 23 рабочих дня")
+} else if selectedMonth == november {
+    print("В ноябре 21 рабочий день")
+} else if selectedMonth == december {
+    print("В декабре 23 рабочих дня")
+}
+
+
+
+// Задача 2
+
+switch selectedMonth {
+case january:
+    print("В январе 15 рабочих дней")
+case february where checkLeapYear == 0:
+    print("В феврале 18 рабочих дней")
+case february where checkLeapYear != 0:
+    print("В феврале 19 рабочих дней")
+case march:
+    print("В марте 22 рабочих дня")
+case april:
+    print("В апреле 22 рабочих дня")
+case may:
+    print("В мае 22 рабочих дня")
+case june:
+    print("В июне 21 рабочий день")
+case july:
+    print("В июле 23 рабочих дня")
+case august:
+    print("В августе 23 рабочих дня")
+case september:
+    print("В сентябре 22 рабочих дня")
+case october:
+    print("В октябре 23 рабочих дня")
+case november:
+    print("В ноябре 21 рабочий день")
+case december:
+    print("В декабре 23 рабочих дня")
+default:
+    break
+}
+
+
+
+// Задача 3
+
+var isHoliday = true
+isHoliday == true ? print("Это выходной день") : print("Это рабочий день")
+
